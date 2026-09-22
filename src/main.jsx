@@ -280,4 +280,6 @@ function App() {
   return <Shell cartCount={cartCount}><Routes><Route path="/" element={<SuiteHome/>}/><Route path="/eduvera" element={<Eduvera/>}/><Route path="/admin" element={<Admin/>}/><Route path="/connect" element={<Connect/>}/><Route path="/shopora" element={<Shopora/>}/><Route path="/insights" element={<Insights/>}/></Routes></Shell>;
 }
 
-createRoot(document.getElementById("root")).render(<BrowserRouter basename={import.meta.env.BASE_URL}><App/></BrowserRouter>);
+createRoot(document.getElementById("root")).render(<BrowserRouter
+  basename={import.meta.env.PROD ? "/alefantverse-frontend-demo-suite" : "/"}
+><App/></BrowserRouter>);

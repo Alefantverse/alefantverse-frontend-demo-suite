@@ -206,3 +206,141 @@
   .eduvera .edu-stats div{min-width:105px}
   .presentation-grid{grid-template-columns:1fr}
 }
+
+/* =========================================================
+   EDUVERA — FINAL HERO ALIGNMENT & SPACING POLISH
+   ========================================================= */
+
+/* Keep the institutional stats on one clean horizontal line.
+   First item aligns with the main content's left edge. */
+.eduvera .edu-stats{
+  display:grid;
+  grid-template-columns:repeat(4,max-content);
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  width:100%;
+  margin-top:42px;
+  text-align:left;
+}
+
+.eduvera .edu-stats div{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  min-width:0;
+  flex:none;
+}
+
+.eduvera .edu-stats strong,
+.eduvera .edu-stats span{
+  text-align:left;
+}
+
+.eduvera .edu-stats strong{
+  white-space:nowrap;
+}
+
+.eduvera .edu-stats span{
+  white-space:nowrap;
+}
+
+/* Reduce the excessive gap between the Eduvera navigation
+   and the hero content. */
+.edu-hero.institution-hero .edu-hero-content{
+  padding-top:110px;
+}
+
+/* Center the contents inside Location / Motto / Pathway / Focus. */
+.eduvera .institution-facts>div{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.eduvera .institution-facts span,
+.eduvera .institution-facts b{
+  text-align:center;
+}
+
+/* Give the four information blocks a more balanced visual rhythm. */
+.eduvera .institution-facts{
+  text-align:center;
+}
+
+@media(max-width:760px){
+
+  .edu-hero.institution-hero .edu-hero-content{
+    padding-top:125px;
+  }
+
+  .eduvera .edu-stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    justify-content:center;
+    gap:22px 18px;
+    text-align:center;
+  }
+
+  .eduvera .edu-stats div{
+    align-items:center;
+  }
+
+  .eduvera .edu-stats strong,
+  .eduvera .edu-stats span{
+    text-align:center;
+  }
+}
+
+/* =========================================================
+   EDUVERA APPLICATION FORM — DESKTOP + MOBILE SCROLL
+   ========================================================= */
+
+/* Application form/prompt scroll container 
+.eduvera .application-modal,
+.eduvera .application-dialog,
+.eduvera .application-form-container {
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: auto;
+  scrollbar-gutter: stable;
+}
+
+/* Keep the form itself responsive 
+.eduvera .application-form {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Desktop 
+@media (min-width: 701px) {
+  .eduvera .application-modal,
+  .eduvera .application-dialog,
+  .eduvera .application-form-container {
+    max-height: 85vh;
+  }
+}
+
+/* Mobile 
+@media (max-width: 700px) {
+  .eduvera .application-modal,
+  .eduvera .application-dialog,
+  .eduvera .application-form-container {
+    max-height: 88vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .eduvera .application-form {
+    max-height: none;
+    overflow: visible;
+  }
+}
+  */
+  

@@ -296,51 +296,107 @@
 }
 
 /* =========================================================
-   EDUVERA APPLICATION FORM — DESKTOP + MOBILE SCROLL
+   EDUVERA — FINAL RESPONSIVE HERO / ALIGNMENT FIX
    ========================================================= */
 
-/* Application form/prompt scroll container 
-.eduvera .application-modal,
-.eduvera .application-dialog,
-.eduvera .application-form-container {
-  max-height: 90vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: auto;
-  scrollbar-gutter: stable;
-}
+/* Desktop: let the institutional image properly fill
+   the entire right-hand hero column. */
+@media (min-width: 1001px) {
+  .eduvera .institution-hero-image {
+    width: 100%;
+    max-width: 650px;
+    justify-self: end;
+  }
 
-/* Keep the form itself responsive 
-.eduvera .application-form {
-  width: 100%;
-  max-width: 100%;
-}
-
-/* Desktop 
-@media (min-width: 701px) {
-  .eduvera .application-modal,
-  .eduvera .application-dialog,
-  .eduvera .application-form-container {
-    max-height: 85vh;
+  .eduvera .institution-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 }
 
-/* Mobile 
+/* Keep the existing mobile hero structure, but make the
+   institutional information consistently centered. */
+@media (max-width: 1000px) {
+  .eduvera .institution-hero-image {
+    width: 100%;
+    max-width: none;
+  }
+
+  .eduvera .institution-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .eduvera .institution-facts > div {
+    text-align: center;
+  }
+
+  .eduvera .institution-facts span,
+  .eduvera .institution-facts b {
+    text-align: center;
+  }
+}
+
+/* Mobile: keep the hero statistics neat and centered. */
 @media (max-width: 700px) {
-  .eduvera .application-modal,
-  .eduvera .application-dialog,
-  .eduvera .application-form-container {
-    max-height: 88vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
+  .eduvera .edu-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 14px;
+    width: 100%;
+    margin-top: 35px;
+    text-align: center;
   }
 
-  .eduvera .application-form {
-    max-height: none;
-    overflow: visible;
+  .eduvera .edu-stats div {
+    min-width: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .eduvera .edu-stats strong,
+  .eduvera .edu-stats span {
+    text-align: center;
+    white-space: normal;
+  }
+
+  .eduvera .institution-facts > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
-  */
-  
+
+/* Small phones */
+@media (max-width: 470px) {
+  .eduvera .edu-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 10px;
+  }
+
+  .eduvera .edu-stats strong {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .eduvera .edu-stats {
+    justify-content: start;
+    justify-items: start;
+  }
+
+  .eduvera .edu-stats div {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .eduvera .edu-stats strong,
+  .eduvera .edu-stats span {
+    text-align: left;
+  }
+}
